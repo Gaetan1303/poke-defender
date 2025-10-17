@@ -1,18 +1,25 @@
 {
-  "name": "poke-defender",
-  "version": "1.0.0",
-  "description": "Un jeu Pokémon en TypeScript avec Canvas",
-  "main": "dist/game.js",
+  "name": "poke-defender-v2",
+  "version": "2.0.0",
+  "description": "PokéDefender amélioré – niveaux, boss, power-ups, mobile",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
-    "start": "tsc && python3 -m http.server 8000",
-    "dev": "tsc --watch"
+    "dev": "webpack serve --mode development",
+    "build": "webpack --mode production"
   },
-  "keywords": ["pokemon", "game", "typescript", "canvas"],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "typescript": "^5.0.0",
-    "@types/node": "^20.0.0"
+    "@types/howler": "^2.2.7",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "style-loader": "^3.3.3",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.0.4",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "howler": "^2.2.3"
   }
 }
