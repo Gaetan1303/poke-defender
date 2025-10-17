@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PokéDefender - Jeu Pokémon</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      font-family: Arial, sans-serif;
+    }
+
+    #container {
+      text-align: center;
+    }
+
+    h1 {
+      color: white;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    canvas {
+      border: 4px solid white;
+      background: #1a1a2e;
+      display: block;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      cursor: none;
+    }
+
+    #instructions {
+      color: white;
+      margin-top: 20px;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 15px;
+      border-radius: 5px;
+      max-width: 800px;
+    }
+
+    #instructions p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>🎮 PokéDefender 🎮</h1>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    
+    <div id="instructions">
+      <p><strong>Contrôles :</strong></p>
+      <p>📍 <strong>Q / Flèche Gauche</strong> : Bouger à gauche</p>
+      <p>📍 <strong>D / Flèche Droite</strong> : Bouger à droite</p>
+      <p>📍 <strong>Espace</strong> : Tirer une attaque Pokémon</p>
+      <p style="margin-top: 15px; color: #FFD700;"><strong>Objectif :</strong> Défends la Base Pokémon ! Élimine les Pokémon sauvages avant qu'ils ne détruisent ta base.</p>
+    </div>
+  </div>
+
+  <script src="dist/game.js"></script>
+</body>
+</html>
